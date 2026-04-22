@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+{% block title %}會員登入 - 會員系統{% endblock %}
+
+{% block content %}
+<article>
+    <h2>會員登入</h2>
+    <form method="post" action="{{ url_for('login') }}">
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email">
+
+        <label for="password">密碼</label>
+        <input type="password" id="password" name="password">
+
+        <button type="submit">登入</button>
+    </form>
+</article>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+{% block title %}系統錯誤 - 會員系統{% endblock %}
+
+{% block content %}
+<section class="error-section">
+    <h2>⚠️ 系統錯誤</h2>
+    <p>{{ message }}</p>
+    <div class="action-group">
+        <a href="javascript:history.back()" role="button" class="secondary">← 返回前一頁</a>
+        <a href="{{ url_for('index') }}" role="button" class="warning">🏠 返回首頁</a>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block title %}會員註冊 - 會員系統{% endblock %}
+
+{% block content %}
+<article>
+    <h2>會員註冊</h2>
+    <form method="post" action="{{ url_for('register') }}">
+        <label for="username">帳號</label>
+        <input type="text" id="username" name="username">
+
+        <label for="email">Email</label>
+        <input type="text" id="email" name="email">
+
+        <label for="password">密碼</label>
+        <input type="password" id="password" name="password">
+
+        <label for="phone">電話（選填）</label>
+        <input type="text" id="phone" name="phone" placeholder="09XXXXXXXX">
+
+        <label for="birthdate">出生日期</label>
+        <input type="date" id="birthdate" name="birthdate">
+
+        <button type="submit">送出註冊</button>
+    </form>
+</article>
+{% endblock %}
